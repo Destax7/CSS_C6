@@ -1,0 +1,98 @@
+:root {
+    /* fonts */
+    --fonttall: "Big Shoulders Display", sans-serif;
+    --fontshort: "Lexend Deca", sans-serif;
+    /* colors */
+    --lorange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dcyan: hsl(179, 100%, 13%);
+    --tpwhite: hsla(0, 0%, 100%, 0.75);/*(paragraphs)*/
+    --lgray: hsl(0, 0%, 95%);/*(background, headings, buttons)*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--lgray);
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    margin: 0 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden ;
+}
+
+section.container > * {    
+    padding: 2rem
+}
+
+section.container > * img {
+    margin-bottom: 1.5rem;
+}
+
+section.container > * h3 {
+    text-transform: uppercase;
+    color: var(--lgray);
+    font-family: var(--fonttall);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+section.container > * p {
+    color: var(--tpwhite);
+    font-family: var(--fontshort);
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 2;
+    margin-bottom: 4rem;
+}
+
+section.container > * button {    
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 1.6rem;
+    font-family: var(--fontshort);
+    transition: 0.3s;    
+    border: 0.15rem  transparent solid;
+}
+
+
+
+section.container > :nth-child(1) {
+    background-color: var(--lorange)
+}
+section.container > :nth-child(1) button {
+    color: var(--lorange);
+}
+
+section.container > :nth-child(2) {
+    background-color: var(--cyan)
+}
+section.container > :nth-child(2) button {
+    color: var(--cyan);
+}
+
+section.container > :nth-child(3) {
+    background-color: var(--dcyan)
+}
+section.container > :nth-child(3) button {
+    color: var(--dcyan);
+}
+section.container > * button:focus {
+    background-color: transparent;
+    color: white;
+    border: 0.15rem white solid;
+}
